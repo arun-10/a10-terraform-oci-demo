@@ -1,0 +1,14 @@
+- name: Create a10_harmony_controller_profile example playbook
+  connection: local
+  hosts: localhost
+  tasks:
+  - name: Create a10_harmony_controller_profile instance
+    a10_harmony_controller_profile:
+      a10_host: "129.213.85.124"
+      a10_username: "admin"
+      a10_password: "a10"
+      a10_port: "443"
+      a10_protocol: "https"
+      host: "10.0.1.2" # mgmt IP
+      port: "8443"     #fixed port
+      user_name: "scampbell@a10networks.com"

@@ -1,0 +1,79 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.7",
+    "serial": 122,
+    "lineage": "2a6e99b2-7480-9e71-fdbb-f4644f9ae8af",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "igw"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "nic"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "oci_compute"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "oci_network"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "route"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "sl"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "subnet"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        }
+    ]
+}

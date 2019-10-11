@@ -1,0 +1,14 @@
+
+- name: DNS
+  connection: local
+  hosts: localhost
+  tasks:
+  - name: a10_ip_dns_primary
+    a10_ip_dns_primary:
+      state: "present"
+      a10_host: "{{ a10_host }}"
+      a10_username: "{{ a10_username }}"
+      a10_password: "{{ a10_password }}"
+      a10_port: "443"
+      a10_protocol: "https"
+      ip_v4_addr: "8.8.8.8"

@@ -1,0 +1,39 @@
+- name: Create a10_harmony_controller_profile example playbook
+  connection: local
+  hosts: localhost
+  tasks:
+  - name: add DNS entry
+    a10_ip_dns_primary:
+      a10_host: "{{ a10_host }}"
+      a10_username: "admin"
+      a10_password: "{{ a10_password }}"
+      a10_protocol: "https"
+      a10_port: "443"
+      ip_v4_addr: "8.8.8.8"
+  - name: Authenticate via token
+    a10_glm:
+      a10_host: "{{ a10_host }}"
+      a10_username: "admin"
+      a10_password: "{{ a10_password }}"
+      a10_protocol: "https"
+      a10_port: "443"
+      token: "vTh7aa90d73d"
+      use_mgmt_port: 1
+      enable_requests: "true"
+      allocate_bandwidth: 1000
+  - name: Send License Request
+    a10_glm:
+      a10_host: "{{ a10_host }}"
+      a10_username: "admin"
+      a10_password: "{{ a10_password }}"
+      a10_protocol: "https"
+      a10_port: "443"
+      send:
+        license_request: "true"
+  - name: a10_config
+    a10_config:
+      a10_host: "{{ a10_host }}"
+      a10_username: "admin"
+      a10_password: "{{ a10_password }}"
+      file_path: "/opt/demo/a10-terraform/oci/main/new_infra/OCI/util/import.txt" #absolute path
+      key_path: "/opt/demo/a10-terraform/oci/main/new_infra/OCI/util/smita_key.pem" #absolute path

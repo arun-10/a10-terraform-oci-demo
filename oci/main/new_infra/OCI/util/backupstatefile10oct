@@ -1,0 +1,339 @@
+{
+    "version": 3,
+    "terraform_version": "0.11.7",
+    "serial": 122,
+    "lineage": "2a6e99b2-7480-9e71-fdbb-f4644f9ae8af",
+    "modules": [
+        {
+            "path": [
+                "root"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "igw"
+            ],
+            "outputs": {
+                "internet_gateway_id": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ocid1.internetgateway.oc1.iad.aaaaaaaariw3v7ilewua4ujsbkm4d3e3njwvfyu3kwctcwha6xqjh5xaybda"
+                }
+            },
+            "resources": {
+                "oci_core_internet_gateway.a10_igw": {
+                    "type": "oci_core_internet_gateway",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "ocid1.internetgateway.oc1.iad.aaaaaaaariw3v7ilewua4ujsbkm4d3e3njwvfyu3kwctcwha6xqjh5xaybda",
+                        "attributes": {
+                            "compartment_id": "ocid1.compartment.oc1..aaaaaaaawayicdhc6dxp5ay7iqc7gvonb7oanxqb4ufhjne3xc37d6637ona",
+                            "defined_tags.%": "0",
+                            "display_name": "a10-igw",
+                            "enabled": "true",
+                            "freeform_tags.%": "0",
+                            "id": "ocid1.internetgateway.oc1.iad.aaaaaaaariw3v7ilewua4ujsbkm4d3e3njwvfyu3kwctcwha6xqjh5xaybda",
+                            "state": "AVAILABLE",
+                            "time_created": "2019-10-10 04:12:22.323 +0000 UTC",
+                            "vcn_id": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 900000000000,
+                                "delete": 900000000000,
+                                "update": 900000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.oci"
+                }
+            },
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "nic"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "oci_compute"
+            ],
+            "outputs": {},
+            "resources": {},
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "oci_network"
+            ],
+            "outputs": {
+                "default_dhcp_options_id": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ocid1.dhcpoptions.oc1.iad.aaaaaaaalsyraks626x2bhycn6u3bw3e43anklk7dnegcscecrkrjhoesfpa"
+                },
+                "id": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja"
+                }
+            },
+            "resources": {
+                "oci_core_virtual_network.a10_vcn": {
+                    "type": "oci_core_virtual_network",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja",
+                        "attributes": {
+                            "cidr_block": "10.0.0.0/16",
+                            "compartment_id": "ocid1.compartment.oc1..aaaaaaaawayicdhc6dxp5ay7iqc7gvonb7oanxqb4ufhjne3xc37d6637ona",
+                            "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaalsyraks626x2bhycn6u3bw3e43anklk7dnegcscecrkrjhoesfpa",
+                            "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaazrijiuma6fzkdlcv46czvywn6jo2norqbfyzblll5hy55meweruq",
+                            "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaa5bmwd4jawyd36dvj5wtazliiua456fg4aku4md62wbq37kgy6yjq",
+                            "defined_tags.%": "0",
+                            "display_name": "a10-vcn",
+                            "dns_label": "a10vcn",
+                            "freeform_tags.%": "0",
+                            "id": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja",
+                            "state": "AVAILABLE",
+                            "time_created": "2019-10-10 04:12:21.199 +0000 UTC",
+                            "vcn_domain_name": "a10vcn.oraclevcn.com"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 900000000000,
+                                "delete": 900000000000,
+                                "update": 900000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.oci"
+                }
+            },
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "route"
+            ],
+            "outputs": {
+                "route_table_id": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ocid1.routetable.oc1.iad.aaaaaaaanesa2dbprqptp4yan77r7rcdbygkdb6ir56e42lwmbwmmclymwuq"
+                }
+            },
+            "resources": {
+                "oci_core_route_table.a10_rt": {
+                    "type": "oci_core_route_table",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "ocid1.routetable.oc1.iad.aaaaaaaanesa2dbprqptp4yan77r7rcdbygkdb6ir56e42lwmbwmmclymwuq",
+                        "attributes": {
+                            "compartment_id": "ocid1.compartment.oc1..aaaaaaaawayicdhc6dxp5ay7iqc7gvonb7oanxqb4ufhjne3xc37d6637ona",
+                            "defined_tags.%": "0",
+                            "display_name": "a10-rt",
+                            "freeform_tags.%": "0",
+                            "id": "ocid1.routetable.oc1.iad.aaaaaaaanesa2dbprqptp4yan77r7rcdbygkdb6ir56e42lwmbwmmclymwuq",
+                            "route_rules.#": "1",
+                            "route_rules.557925798.cidr_block": "",
+                            "route_rules.557925798.destination": "0.0.0.0/0",
+                            "route_rules.557925798.destination_type": "CIDR_BLOCK",
+                            "route_rules.557925798.network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaariw3v7ilewua4ujsbkm4d3e3njwvfyu3kwctcwha6xqjh5xaybda",
+                            "state": "AVAILABLE",
+                            "time_created": "2019-10-10 04:12:23.618 +0000 UTC",
+                            "vcn_id": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 900000000000,
+                                "delete": 900000000000,
+                                "update": 900000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.oci"
+                }
+            },
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "sl"
+            ],
+            "outputs": {
+                "security_list_ids": {
+                    "sensitive": false,
+                    "type": "list",
+                    "value": [
+                        "ocid1.securitylist.oc1.iad.aaaaaaaaq2g4ssho6j6yot5zjhsrgjbvyn7tfbpmiiqglqk7abgiqaifuaga"
+                    ]
+                }
+            },
+            "resources": {
+                "oci_core_security_list.a10_sl": {
+                    "type": "oci_core_security_list",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "ocid1.securitylist.oc1.iad.aaaaaaaaq2g4ssho6j6yot5zjhsrgjbvyn7tfbpmiiqglqk7abgiqaifuaga",
+                        "attributes": {
+                            "compartment_id": "ocid1.compartment.oc1..aaaaaaaawayicdhc6dxp5ay7iqc7gvonb7oanxqb4ufhjne3xc37d6637ona",
+                            "defined_tags.%": "0",
+                            "display_name": "a10-sl",
+                            "egress_security_rules.#": "1",
+                            "egress_security_rules.1582479153.destination": "0.0.0.0/0",
+                            "egress_security_rules.1582479153.destination_type": "CIDR_BLOCK",
+                            "egress_security_rules.1582479153.icmp_options.#": "0",
+                            "egress_security_rules.1582479153.protocol": "all",
+                            "egress_security_rules.1582479153.stateless": "false",
+                            "egress_security_rules.1582479153.tcp_options.#": "0",
+                            "egress_security_rules.1582479153.udp_options.#": "0",
+                            "freeform_tags.%": "0",
+                            "id": "ocid1.securitylist.oc1.iad.aaaaaaaaq2g4ssho6j6yot5zjhsrgjbvyn7tfbpmiiqglqk7abgiqaifuaga",
+                            "ingress_security_rules.#": "5",
+                            "ingress_security_rules.2849740639.icmp_options.#": "0",
+                            "ingress_security_rules.2849740639.protocol": "6",
+                            "ingress_security_rules.2849740639.source": "0.0.0.0/0",
+                            "ingress_security_rules.2849740639.source_type": "CIDR_BLOCK",
+                            "ingress_security_rules.2849740639.stateless": "false",
+                            "ingress_security_rules.2849740639.tcp_options.#": "1",
+                            "ingress_security_rules.2849740639.tcp_options.0.max": "8080",
+                            "ingress_security_rules.2849740639.tcp_options.0.min": "8080",
+                            "ingress_security_rules.2849740639.tcp_options.0.source_port_range.#": "0",
+                            "ingress_security_rules.2849740639.udp_options.#": "0",
+                            "ingress_security_rules.295853994.icmp_options.#": "0",
+                            "ingress_security_rules.295853994.protocol": "1",
+                            "ingress_security_rules.295853994.source": "0.0.0.0/0",
+                            "ingress_security_rules.295853994.source_type": "CIDR_BLOCK",
+                            "ingress_security_rules.295853994.stateless": "false",
+                            "ingress_security_rules.295853994.tcp_options.#": "0",
+                            "ingress_security_rules.295853994.udp_options.#": "0",
+                            "ingress_security_rules.2986978097.icmp_options.#": "0",
+                            "ingress_security_rules.2986978097.protocol": "6",
+                            "ingress_security_rules.2986978097.source": "0.0.0.0/0",
+                            "ingress_security_rules.2986978097.source_type": "CIDR_BLOCK",
+                            "ingress_security_rules.2986978097.stateless": "false",
+                            "ingress_security_rules.2986978097.tcp_options.#": "1",
+                            "ingress_security_rules.2986978097.tcp_options.0.max": "443",
+                            "ingress_security_rules.2986978097.tcp_options.0.min": "443",
+                            "ingress_security_rules.2986978097.tcp_options.0.source_port_range.#": "0",
+                            "ingress_security_rules.2986978097.udp_options.#": "0",
+                            "ingress_security_rules.3861548008.icmp_options.#": "0",
+                            "ingress_security_rules.3861548008.protocol": "6",
+                            "ingress_security_rules.3861548008.source": "0.0.0.0/0",
+                            "ingress_security_rules.3861548008.source_type": "CIDR_BLOCK",
+                            "ingress_security_rules.3861548008.stateless": "false",
+                            "ingress_security_rules.3861548008.tcp_options.#": "1",
+                            "ingress_security_rules.3861548008.tcp_options.0.max": "80",
+                            "ingress_security_rules.3861548008.tcp_options.0.min": "80",
+                            "ingress_security_rules.3861548008.tcp_options.0.source_port_range.#": "0",
+                            "ingress_security_rules.3861548008.udp_options.#": "0",
+                            "ingress_security_rules.47193274.icmp_options.#": "0",
+                            "ingress_security_rules.47193274.protocol": "6",
+                            "ingress_security_rules.47193274.source": "0.0.0.0/0",
+                            "ingress_security_rules.47193274.source_type": "CIDR_BLOCK",
+                            "ingress_security_rules.47193274.stateless": "false",
+                            "ingress_security_rules.47193274.tcp_options.#": "1",
+                            "ingress_security_rules.47193274.tcp_options.0.max": "22",
+                            "ingress_security_rules.47193274.tcp_options.0.min": "22",
+                            "ingress_security_rules.47193274.tcp_options.0.source_port_range.#": "0",
+                            "ingress_security_rules.47193274.udp_options.#": "0",
+                            "state": "AVAILABLE",
+                            "time_created": "2019-10-10 04:12:22.742 +0000 UTC",
+                            "vcn_id": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 900000000000,
+                                "delete": 900000000000,
+                                "update": 900000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.oci"
+                }
+            },
+            "depends_on": []
+        },
+        {
+            "path": [
+                "root",
+                "subnet"
+            ],
+            "outputs": {
+                "oci_subnet_id1": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ocid1.subnet.oc1.iad.aaaaaaaaikuyvwvlfrd6bstjvcpwja567sht536hymjaknxu5tebxjzlzrdq"
+                },
+                "oci_subnet_id3": {
+                    "sensitive": false,
+                    "type": "string",
+                    "value": "ocid1.subnet.oc1.iad.aaaaaaaaeuasaylf3ujvckkxh2bctysh26dxoagttf6rbgiok2bc26pbd6sa"
+                }
+            },
+            "resources": {
+                "oci_core_subnet.a10_subnet1": {
+                    "type": "oci_core_subnet",
+                    "depends_on": [],
+                    "primary": {
+                        "id": "ocid1.subnet.oc1.iad.aaaaaaaaikuyvwvlfrd6bstjvcpwja567sht536hymjaknxu5tebxjzlzrdq",
+                        "attributes": {
+                            "availability_domain": "paEo:US-ASHBURN-AD-2",
+                            "cidr_block": "10.0.1.0/24",
+                            "compartment_id": "ocid1.compartment.oc1..aaaaaaaawayicdhc6dxp5ay7iqc7gvonb7oanxqb4ufhjne3xc37d6637ona",
+                            "defined_tags.%": "0",
+                            "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaalsyraks626x2bhycn6u3bw3e43anklk7dnegcscecrkrjhoesfpa",
+                            "display_name": "a10-subnet1",
+                            "dns_label": "a10subnet1",
+                            "freeform_tags.%": "0",
+                            "id": "ocid1.subnet.oc1.iad.aaaaaaaaikuyvwvlfrd6bstjvcpwja567sht536hymjaknxu5tebxjzlzrdq",
+                            "prohibit_public_ip_on_vnic": "false",
+                            "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaanesa2dbprqptp4yan77r7rcdbygkdb6ir56e42lwmbwmmclymwuq",
+                            "security_list_ids.#": "1",
+                            "security_list_ids.2939713637": "ocid1.securitylist.oc1.iad.aaaaaaaaq2g4ssho6j6yot5zjhsrgjbvyn7tfbpmiiqglqk7abgiqaifuaga",
+                            "state": "AVAILABLE",
+                            "subnet_domain_name": "a10subnet1.a10vcn.oraclevcn.com",
+                            "time_created": "2019-10-10 04:12:24.488 +0000 UTC",
+                            "vcn_id": "ocid1.vcn.oc1.iad.aaaaaaaaexpfxfj6kgol25fuote6uovzqwi4n5fgrfnhanubraxsf2srnvja",
+                            "virtual_router_ip": "10.0.1.1",
+                            "virtual_router_mac": "00:00:17:F0:D4:2D"
+                        },
+                        "meta": {
+                            "e2bfb730-ecaa-11e6-8f88-34363bc7c4c0": {
+                                "create": 900000000000,
+                                "delete": 900000000000,
+                                "update": 900000000000
+                            }
+                        },
+                        "tainted": false
+                    },
+                    "deposed": [],
+                    "provider": "provider.oci"
+                }
+            },
+            "depends_on": []
+        }
+    ]
+}

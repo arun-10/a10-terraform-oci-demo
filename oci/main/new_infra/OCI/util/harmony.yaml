@@ -1,0 +1,19 @@
+
+
+
+- name: Create a10_harmony_controller_profile instance
+   a10_harmony_controller_profile:
+     a10_host: "{{ a10_host }}"
+     a10_username: "admin"
+     a10_password: "{{ a10_password }}"
+     a10_port: "443"
+     a10_protocol: "https"
+     host: "129.213.157.228" # mgmt IP
+     port: "8443"     #fixed port
+     user_name: "scampbell@a10networks.com" #profile name of harmony controller
+     secret_value: "admin123"
+     provider: "root"
+     thunder_mgmt_ip:
+       ip_address: "{{ a10_host }}"
+     action: "register"
+     use_mgmt_port: "true"

@@ -1,0 +1,29 @@
+- name: Create a10_harmony_controller_profile example playbook
+  connection: local
+  hosts: localhost
+  tasks:
+
+
+  - name: De-Register
+    a10_harmony_controller_profile:
+      a10_host: "129.213.85.124"
+      a10_username: "admin"
+      a10_password: "anuwcljrwtg6jvyct3zdmvxdem67fbb36oqqe5c3fosl5dfjm5sjoj4pc5la"
+      a10_port: "443"
+      a10_protocol: "https"
+      host: "10.0.1.2" # mgmt IP
+      port: "8443"     #fixed port
+      user_name: "scampbell@a10networks.com" #profile name of harmony controller
+      action: "deregister"
+
+  - name: Register
+    a10_harmony_controller_profile:
+      a10_host: "129.213.85.124"
+      a10_username: "admin"
+      a10_password: "anuwcljrwtg6jvyct3zdmvxdem67fbb36oqqe5c3fosl5dfjm5sjoj4pc5la"
+      a10_port: "443"
+      a10_protocol: "https"
+      host: "10.0.1.2" # mgmt IP
+      port: "8443"     #fixed port
+      user_name: "scampbell@a10networks.com" #profile name of harmony controller
+      action: "register"
